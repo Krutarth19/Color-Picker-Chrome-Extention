@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style>
+      h1 {
+         font-size: 24px;
+         margin-bottom: 10px;
+         font-style: bold;
+      }
+
+      p {
+         font-size: 16px;
+         line-height: 1.5;
+         margin-bottom: 15px;
+      }
+
+      button {
+         font-size: 16px;
+         padding: 10px;
+         background-color: #0077FF;
+         color: #FFF;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      .colorGrid {
+         width: 100%;
+         height: 50px;
+         margin-bottom: 10px;
+      }
+
+      .colorValue {
+         font-size: 14px;
+         margin-top: 5px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <h1>Color Picker Chrome Extension</h1>
+   <p> This is a simple Chrome extension that allows you to pick a color from any webpage and copy its hexadecimal value
+      to the clipboard. It uses the Chrome storage API to save the selected color, and the Chrome scripting API to
+      inject a content script into the active tab and retrieve the selected color.</p>
+
+   <h1>How to Use</h1>
+   <p> To use this extension, simply click on the extension icon and then click the "Pick Color" button. This will
+      activate an eye dropper tool that you can use to select a color from any part of the page. Once you have selected
+      a color, the extension will display its hexadecimal value and set the background color of the extension popup to
+      the selected color.</p>
+
+   <h1>Code Overview</h1>
+   <p>The extension is built using HTML, CSS, and JavaScript. Here is an overview of the main components:
+   </p>
+
+   <h1>Manifest</h1>
+   <p>The manifest.json file contains the metadata for the extension, including its name, description, version, and
+      permissions. It also specifies the background script (background.js), options page (options.html), popup
+      (popup.html), and icon images.
+   </p>
+
+   <h1>Popup</h1>
+   <p>The popup.html file defines the HTML structure for the extension popup. It contains a button to trigger the color
+      picker, a color grid to display the selected color, and a text element to display the hexadecimal value of the
+      selected color.
+   </p>
+   <h1>JavaScript</h1>
+   <p>The popup.js file contains the main JavaScript code for the extension. It defines an event listener for the color
+      picker button, which uses the Chrome storage API to retrieve the selected color and the Chrome scripting API to
+      inject a content script into the active tab and retrieve the selected color. The selected color is then displayed
+      in the color grid and the hexadecimal value is copied to the clipboard.
+      <br>The background.js file contains a service worker that listens for events from the extension and performs
+      background tasks, such as managing the Chrome storage.
+   </p>
+
+   <h1>CSS</h1>
+   <p>The popup.css file contains the CSS styling for the extension popup.
+   </p>
+   <h1>Installation</h1>
+   <p>To install this extension, download the source code and load it as an unpacked extension in Chrome. You can also
+      install it from the Chrome Web Store.
+   </p>
+   <h1>License</h1>
+   <p>This extension is licensed under the MIT License. Feel free to use it and modify it as you see fit.
+   </p>
+</body>
+
+</html>
